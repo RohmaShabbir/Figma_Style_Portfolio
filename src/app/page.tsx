@@ -1,101 +1,137 @@
 import Image from "next/image";
+import Card from "@/app/components/recent-post-card";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <>
+      <div className="hero-section">
+        <div className="container">
+          <div className="main">
+            <div className="text-container">
+              <h1 className="main-text">Hi, I am Rohma, Frontend Developer</h1>
+              <p className="main-para">
+                Hello! I’m Rohma, a 20-year-old with a fresh foundation in
+                academics, having recently completed my Intermediate studies.
+                I’m currently advancing my technical skills through an intensive
+                IT course at the prestigious Governor House, where I’m delving
+                into advanced technologies, particularly Next.js and JavaScript.
+                With a strong passion for web development, I’m driven to stay at
+                the forefront of this dynamic field. I love exploring new
+                frameworks and tools that push the boundaries of what’s possible
+                on the web!
+              </p>
+              <button className="resume-btn">Download Resume</button>
+            </div>
+            <div>
+              <div>
+                <Image
+                  src="/person.png"
+                  width={300}
+                  height={300}
+                  alt="person"
+                  className="rounded-full"
+                />
+              </div>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </div>
+
+      <div className="recent-post">
+        <div className="container">
+          <div className="main">
+            <div className="heading">
+              <h3>Recent Post</h3>
+              <button className="view-all-btn">View All</button>
+            </div>
+
+            <div className="card-parent">
+              <Card />
+              <Card />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="featured-section">
+        <div className="container">
+          <div className="main">
+            <div className="main-heading">
+              <h3>Featured Works</h3>
+            </div>
+
+            <div className="card-parent">
+              <div className="card">
+                <Image
+                  src="/image1.png"
+                  width={245}
+                  height={180}
+                  alt="image"
+                />
+
+                <div className="card-content">
+                  <h2>Designing E-Commerce Website</h2>
+                  <div className="badge-parent">
+                    <div className="badge">
+                      <p>2024</p>
+                    </div>
+                    <p>Website</p>
+                  </div>
+                  <p>
+                    &quot;I have created an e-commerce shopping website where convenience meets quality. Explore the best products with ease!&quot;
+                  </p>
+                </div>
+              </div>
+
+              <div className="card">
+                <Image
+                  src="/image2.png"
+                  width={245}
+                  height={180}
+                  alt="image"
+                />
+
+                <div className="card-content">
+                  <h2>Designing Portfolio</h2>
+                  <div className="badge-parent">
+                    <div className="badge">
+                      <p>2024</p>
+                    </div>
+                    <p>Personal Portfolio</p>
+                  </div>
+                  <p>
+                    &quot;For my portfolio website, I showcase my skills, projects, 
+                    and passion for web development. It&apos;s a reflection of my journey and creativity!&quot;
+                  </p>
+                </div>
+              </div>
+
+              <div className="card">
+                <Image
+                  src="/image3.png"
+                  width={245}
+                  height={180}
+                  alt="image"
+                />
+
+                <div className="card-content">
+                  <h2>Designing SignUp Form</h2>
+                  <div className="badge-parent">
+                    <div className="badge">
+                      <p>2024</p>
+                    </div>
+                    <p>SignUp Form</p>
+                  </div>
+                  <p>
+                    &quot;I have created a sleek and responsive signup and signin 
+                    form using HTML and CSS, blending functionality with modern design!&quot;
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
